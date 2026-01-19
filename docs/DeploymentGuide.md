@@ -281,6 +281,33 @@ See [Deploy App from Foundry](./deploy_app_from_foundry.md) for instructions on 
 ### Common Issues
 
 <details>
+  <summary><b>Azure Quota Errors (OpenAI, VM Cores)</b></summary>
+
+If you encounter quota errors during deployment:
+
+**OpenAI Quota Error**:
+```
+InsufficientQuota: Tokens Per Minute (thousands) - gpt-4o - GlobalStandard
+Current quota usage is 50 and the quota limit is 50
+```
+
+**VM Cores Quota Error**:
+```
+QuotaExceeded: standardDASv5Family Cores quota
+Current Limit: 0, Additional Required: 4
+```
+
+**Solutions**:
+1. **Request quota increase** (recommended): Via Azure Portal → Quotas
+2. **Deploy to different region**: Change `location` in `infra/main.bicepparam`
+3. **Use different AI model**: Change to GPT-3.5-turbo or GPT-4
+4. **Disable Jumpbox VM** (temporary): Set `deployToggles.jumpbox = false`
+
+For detailed troubleshooting steps, see [Quota Troubleshooting Guide](./quota-troubleshooting.md).
+
+</details>
+
+<details>
   <summary><b>Purview Account Creation Error (Marketplace Gallery Item)</b></summary>
 
 If you encounter an error when creating a Purview account through the Azure portal:

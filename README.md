@@ -25,6 +25,8 @@ This accelerator extends the [AI Landing Zone](https://github.com/Azure/ai-landi
 | ![Architecture](./img/Architecture/AI-Landing-Zone-without-platform.png) |
 |---|
 
+> 📊 **詳細なアーキテクチャ図**: レイヤー別、データフロー、ネットワーク構成、RAGフローなどの詳細図は [**アーキテクチャドキュメント**](./docs/architecture-diagram.md) をご覧ください。
+
 ### Key Components
 
 | Component | Purpose |
@@ -222,9 +224,12 @@ Supporting documentation
 | Document | Description |
 |----------|-------------|
 | [Deployment Guide](./docs/DeploymentGuide.md) | Complete deployment instructions |
+| [Architecture Diagrams](./docs/architecture-diagram.md) | Detailed architecture diagrams (layers, data flow, network, RAG) |
 | [Post Deployment Steps](./docs/post_deployment_steps.md) | Verify your deployment |
 | [Parameter Guide](./docs/PARAMETER_GUIDE.md) | Configure deployment parameters |
 | [Quota Check Guide](./docs/quota_check.md) | Check Azure OpenAI quota availability |
+| [Quota Troubleshooting](./docs/quota-troubleshooting.md) | Resolve quota errors during deployment |
+| [Purview Account Creation](./docs/create_purview_account.md) | Guide to create Purview account (resolves marketplace errors) |
 
 ### Customization & Operations
 
