@@ -54,7 +54,7 @@ The postprovision automation scripts consume deployment outputs via the `AZURE_O
 | `purviewResourceGroup` | `purviewResourceGroup` | Purview automation scripts | Resource group containing the Purview account |
 | `purviewSubscriptionId` | `purviewSubscriptionId` | Purview automation scripts | Subscription containing the Purview account |
 
-> **Note**: Purview is NOT provisioned by this template. Supply the existing account details via parameters; if only `purviewAccountResourceId` is provided, the deployment now derives the name, resource group, and subscription automatically for the scripts.
+> **Note**: Purview is NOT provisioned by this template. You must create a Purview account separately before deployment. Supply the existing account details via the `purviewAccountResourceId` parameter; the deployment will automatically derive the name, resource group, and subscription for the automation scripts. See [Purview Account Creation Guide](./create_purview_account.md) for detailed instructions.
 
 ### Lakehouse Configuration
 

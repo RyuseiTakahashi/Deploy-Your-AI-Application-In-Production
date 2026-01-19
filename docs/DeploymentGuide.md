@@ -35,7 +35,7 @@ To deploy this solution accelerator, ensure you have access to an [Azure subscri
 | Resource | Requirement |
 |----------|-------------|
 | **Microsoft Fabric** | Access to create F8 capacity and workspace, OR existing Fabric capacity ID |
-| **Microsoft Purview** | Existing tenant-level Purview account resource ID |
+| **Microsoft Purview** | Existing tenant-level Purview account resource ID ([create guide](./create_purview_account.md)) |
 
 ### Region Availability
 
@@ -279,6 +279,37 @@ See [Deploy App from Foundry](./deploy_app_from_foundry.md) for instructions on 
 ## Troubleshooting
 
 ### Common Issues
+
+<details>
+  <summary><b>Purview Account Creation Error (Marketplace Gallery Item)</b></summary>
+
+If you encounter an error when creating a Purview account through the Azure portal:
+
+```
+Could not create the marketplace item
+Gallery item is required. Gallery item is not specified.
+```
+
+This is a known Azure Marketplace issue. Use one of these workarounds:
+
+1. **Create from Resource Group** (recommended):
+   - Navigate to your subscription → select a resource group
+   - Click "Create" within the resource group
+   - Search for "Microsoft Purview" and create from there
+
+2. **Use Azure CLI**:
+   ```bash
+   az purview account create \
+     --name <account-name> \
+     --resource-group <rg> \
+     --location eastus2
+   ```
+
+3. **Use the provided Bicep template**: See `infra/examples/purview-account.bicep`
+
+For detailed instructions, see [Purview Account Creation Guide](./create_purview_account.md).
+
+</details>
 
 <details>
   <summary><b>Fabric Capacity is Paused</b></summary>

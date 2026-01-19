@@ -122,7 +122,7 @@ Follow the deployment guide to deploy this solution to your own Azure subscripti
   |-------------|---------|
   | **Azure Subscription** | Owner or Contributor + User Access Administrator permissions |
   | **Microsoft Fabric** | Optional. Either access to create capacity/workspace, or provide existing Fabric capacity/workspace IDs, or disable Fabric automation |
-  | **Microsoft Purview** | Existing tenant-level Purview account (or ability to create one) |
+  | **Microsoft Purview** | Existing tenant-level Purview account resource ID (see [how to create](./docs/create_purview_account.md)) |
   | **Azure CLI** | Version 2.61.0 or later |
   | **Azure Developer CLI** | Version 1.15.0 or later |
   | **Quota** | Sufficient Azure OpenAI quota ([check here](./docs/quota_check.md)) |
